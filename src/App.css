@@ -14,7 +14,7 @@
 
 .head{
   grid-area: head;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .nav{
   grid-area: nav;
