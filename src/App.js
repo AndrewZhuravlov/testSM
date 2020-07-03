@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './components/header';
-import Aside from './components/aside';
-import Main from './components/main';
+import Header from './components/Header/header';
+import Aside from './components/Aside/aside';
+import Main from './components/Main/main';
 
 
 function App() {
