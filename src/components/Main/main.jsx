@@ -1,5 +1,6 @@
 import React from 'react';
 import st from './main.module.css'
+import MyPosts from './MyPosts/MyPosts';
 
 
 function Main(){
@@ -14,14 +15,7 @@ function Main(){
               desc
           </div>
         </div>
-        <div className={st.myPosts}>
-          <div className={st.postCreater}>
-              inputttt
-          </div>
-          <div className={st.currentPosts}>
-              postsss
-          </div>
-        </div>
+        <MyPosts/>
       </main>
     )
 }
