@@ -5,7 +5,7 @@ function Aside(){
         <aside className={style.nav}>
         <nav>
           <ul>
-            <li><a href="#">Profile</a></li>
+            <li ><a className = {`${style.nav} ${style.active}`} href="#">Profile</a></li>
             <li><a href="#">Music</a></li>
             <li><a href="#">Message</a></li>
             <li><a href="#">News</a></li>

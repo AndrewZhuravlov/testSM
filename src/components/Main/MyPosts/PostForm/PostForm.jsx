@@ -6,7 +6,11 @@ function PostForm() {
   return (
 
     <div className={st.postCreater}>
-      inputttt
+      <form action="#">
+          <h2>My Posts</h2>
+          <input type="text" placeholder = 'your news...' />
+          <button>Post</button>
+      </form>
     </div>
 
   )
