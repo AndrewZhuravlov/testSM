@@ -1,0 +1,19 @@
+.nav{
+  background-color: #A65F00	;
+}
+.nav ul, li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  padding: 10px 10px 0px 10px;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .last{
+    
+    margin-top: 20px;
+  }

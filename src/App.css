@@ -18,44 +18,18 @@
   grid-area: head;
   border-radius: 3px;
 }
-.nav{
+.aside_nav__2KtrR{
   grid-area: nav;
   border-radius: 10px;
 }
-.main{
+.main_main__38wWP{
   grid-area: main;
   border-radius: 10px;
 }
 
-.nav{
-  background-color: #A65F00	;
-}
-.nav ul, li{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.nav li {
-  padding: 10px 10px 0px 10px;
-  }
-  .nav a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  .last{
-    
-    margin-top: 20px;
-  }
 
-  .imgTop{
-    display: block;
-    width: 90%;
-    margin: 0 auto;
+
+  
     
-  }
-  main{
-    background-image: url('https://imagekit.io/static/img/newPages/homepage-wave-bg.svg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  
+  

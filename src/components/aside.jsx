@@ -1,15 +1,15 @@
 import React from 'react';
-
+import style from './aside.module.css'
 function Aside(){
     return(
-        <aside className='nav'>
+        <aside className={style.nav}>
         <nav>
           <ul>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Music</a></li>
             <li><a href="#">Message</a></li>
             <li><a href="#">News</a></li>
-            <li className="last"><a href="#">Settings</a></li>
+            <li className={style.last}><a href="#">Settings</a></li>
           </ul>
         </nav>
       </aside>

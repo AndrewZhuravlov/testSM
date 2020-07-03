@@ -1,23 +1,24 @@
 import React from 'react';
+import st from './main.module.css'
 
 
 function Main(){
     return(
-        <main className='main'>
+        <main className={st.main}>
         
-        <div className="aboutMe">
-          <div className="ava">
+        <div className={st.aboutMe}>
+          <div className={st.ava}>
               image
           </div>
-          <div className="description">
+          <div className={st.description}>
               desc
           </div>
         </div>
-        <div className="myPosts">
-          <div className="postCreater">
+        <div className={st.myPosts}>
+          <div className={st.postCreater}>
               inputttt
           </div>
-          <div className="currentPosts">
+          <div className={st.currentPosts}>
               postsss
           </div>
         </div>
