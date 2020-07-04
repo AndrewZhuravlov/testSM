@@ -5,7 +5,8 @@ function Dialogs(props) {
 
     return (
         <div className={style.dialogWrap}>
-            Dialogs
+            {/* <UserDialogsName/>
+            <DialogsMessages/> */}
         </div>
     )
     

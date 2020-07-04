@@ -27,9 +27,18 @@
   grid-area: main;
   border-radius: 10px;
 }
+.Dialogs_dialogWrap__2WcPS{
+  grid-area: main;
+}
 
-
-  
+.Music_musicWrap__xwg_H{
+  grid-area: main;
+}
     
   
-  
+.News_newsWrap__X6eui{
+  grid-area: main;
+}
+.Settings_settingsWrap__2aPGt{
+  grid-area: main;
+}
