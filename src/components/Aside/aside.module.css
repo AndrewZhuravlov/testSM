@@ -17,6 +17,6 @@
     
     margin-top: 20px;
   }
-  .nav.active{
-    color: yellow;
+  .nav a.active{
+    color: gold;
   }
