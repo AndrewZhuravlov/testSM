@@ -8,11 +8,17 @@ function MyPosts() {
 
     <div className={st.myPosts}>
       <PostForm />
-      <Post message = 'Privet'  likeCounter = '20'/>
-      <Post message = 'Tu Pityx' likeCounter = '15' />
+      <Post message = {postsData[0].message}  likeCounter = {postsData[0].likeCounter} id = {postsData[0].id}/>
+      <Post message = {postsData[1].message}  likeCounter = {postsData[1].likeCounter} id = {postsData[1].id} />
       
     </div>
 
   )
 }
+
+/* типа данные с сервера */
+let postsData = [
+  {id: 1, message: 'Privet', likeCounter: 20, },
+  {id: 2, message: 'Tu Pityxxxx', likeCounter: 12, }
+]
 export default MyPosts;

@@ -1,4 +1,26 @@
 .dialogWrap{
    display: grid;
-   grid-template-columns: 2fr 10fr;
+   grid-template-columns: 3fr 9fr;
+   grid-template-rows: 12fr;
+}
+.person img{
+   width: 50px;
+}
+.messageHistoryItem{
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 5px;
+   
+}
+.active{
+   color: gold;
+}
+.dialogMess{
+   border: 1px solid black ;
+   border-radius: 5px;
+   padding: 10px 20px;
+}
+.person span{
+   display: block;
 }

@@ -8,7 +8,7 @@ function Aside(){
           <ul>
             <li ><NavLink activeClassName ={style.active} /* className = {`${style.nav} ${style.active}`} */ to="/Profile">Profile</NavLink></li>
             <li><NavLink activeClassName ={style.active} to="/music">Music</NavLink></li>
-            <li><NavLink activeClassName ={style.active} to="/messages">Message</NavLink></li>
+            <li><NavLink activeClassName ={style.active} to="/messages">Messages</NavLink></li>
             <li><NavLink activeClassName ={style.active} to="/news">News</NavLink></li>
             <li className={style.last}><NavLink activeClassName ={style.active} to="settings">Settings</NavLink></li>
           </ul>
