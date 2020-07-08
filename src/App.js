@@ -16,8 +16,8 @@ function App(props) {
       <div className='wrapper'>
         <Header />
         <Aside />
-        <Route path='/profile' render={()=><Main postsData ={props.postsData} />} />
-        <Route path='/messages' render={()=><Dialogs />} />
+        <Route path='/profile' render={()=><Main DATA ={props.DATA[0]} />} />
+        <Route path='/messages' render={()=><Dialogs DATA={[props.DATA[1], props.DATA[2]]} />} />
         <Route path='/music' component={Music} />
         <Route path='/news' component={News} />
         <Route path='/settings' component={Settings } />

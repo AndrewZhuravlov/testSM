@@ -6,7 +6,7 @@ import Post from './Post/Post';
 function MyPosts(props) {
   /* типа данные с сервера */
   /* тут мы преобразуем данные пришедшие с сервера в массив обьектов который в JSX читается */
-  let posts = props.postsData.map(item=>  <Post message = {item.message}  likeCounter = {item.likeCounter} id = {item.id} />)
+  let posts = props.DATA.map(item=>  <Post message = {item.message}  likeCounter = {item.likeCounter} id = {item.id} />)
 
 
     

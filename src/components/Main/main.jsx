@@ -9,7 +9,7 @@ function Main(props){
         <main className={st.main}>
         
         <AboutMe/>
-        <MyPosts  postsData ={props.postsData}/>
+        <MyPosts  DATA ={props.DATA}/>
       </main>
     )
 }
