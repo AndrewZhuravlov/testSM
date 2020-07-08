@@ -1,4 +1,6 @@
 .currentPosts img{
     max-width: 50px ;
     border-radius: 20px;
+
+    padding-left: 20px;
 }

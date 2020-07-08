@@ -4,12 +4,12 @@ import MyPosts from './MyPosts/MyPosts';
 
 
 
-function Main(){
+function Main(props){
     return(
         <main className={st.main}>
         
         <AboutMe/>
-        <MyPosts/>
+        <MyPosts  postsData ={props.postsData}/>
       </main>
     )
 }

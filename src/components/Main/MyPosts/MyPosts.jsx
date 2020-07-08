@@ -3,22 +3,30 @@ import st from './MyPosts.module.css'
 import PostForm from './PostForm/PostForm'
 import Post from './Post/Post';
 
-function MyPosts() {
+function MyPosts(props) {
+  /* типа данные с сервера */
+  /* тут мы преобразуем данные пришедшие с сервера в массив обьектов который в JSX читается */
+  let posts = props.postsData.map(item=>  <Post message = {item.message}  likeCounter = {item.likeCounter} id = {item.id} />)
+
+
+    
   return (
 
     <div className={st.myPosts}>
       <PostForm />
-      <Post message = {postsData[0].message}  likeCounter = {postsData[0].likeCounter} id = {postsData[0].id}/>
-      <Post message = {postsData[1].message}  likeCounter = {postsData[1].likeCounter} id = {postsData[1].id} />
-      
+      {posts}
+     
     </div>
 
   )
 }
 
-/* типа данные с сервера */
-let postsData = [
-  {id: 1, message: 'Privet', likeCounter: 20, },
-  {id: 2, message: 'Tu Pityxxxx', likeCounter: 12, }
-]
+
+
+
+
+
+
+
+
 export default MyPosts;

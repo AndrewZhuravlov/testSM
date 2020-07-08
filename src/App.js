@@ -10,14 +10,14 @@ import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className='wrapper'>
         <Header />
         <Aside />
-        <Route path='/profile' component={Main} />
-        <Route path='/messages' component={Dialogs} />
+        <Route path='/profile' render={()=><Main postsData ={props.postsData} />} />
+        <Route path='/messages' render={()=><Dialogs />} />
         <Route path='/music' component={Music} />
         <Route path='/news' component={News} />
         <Route path='/settings' component={Settings } />
