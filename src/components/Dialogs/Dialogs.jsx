@@ -16,8 +16,10 @@ import MessageItem from './MessageItem/MessageItem';
 
 
 function Dialogs(props) {
-let users = props.DATA[0].map(item => <Dialog path={item.path} name={item.name} />  )/* преобразуем в массив компонент */
-let messages =  props.DATA[1].map(item=>  <MessageItem name={item.name} message = {item.message} id={item.id} /> )
+    console.log(props);
+    
+let users = props.state.userData.map(item => <Dialog path={item.path} name={item.name} />  )/* преобразуем в массив компонент */
+let messages =  props.state.messageData.map(item=>  <MessageItem name={item.name} message = {item.message} id={item.id} /> )
 
     return (
         <div className={style.dialogWrap}>

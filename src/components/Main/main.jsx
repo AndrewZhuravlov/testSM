@@ -5,11 +5,13 @@ import MyPosts from './MyPosts/MyPosts';
 
 
 function Main(props){
+ console.log(props);
+ 
     return(
         <main className={st.main}>
         
         <AboutMe/>
-        <MyPosts  DATA ={props.DATA}/>
+        <MyPosts  state ={props.state}/>
       </main>
     )
 }
