@@ -4,6 +4,14 @@ import React from 'react';
 
 
 function MessageItem(props) {
+
+    let message = React.createRef();
+
+    function sendMessage(){
+       let textMessage= message.current.value;
+    }
+
+
     return (
         <div className={style.messageHistoryItem}>
             <div className={style.person}>
@@ -14,6 +22,8 @@ function MessageItem(props) {
              <span>
                  {props.message}
             </span>
+            <input ref={message} type="text"/>
+            <button onClick={sendMessage} >Send Message</button>
             </div>
         </div>
     )

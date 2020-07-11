@@ -4,30 +4,30 @@ import MyPosts from './MyPosts/MyPosts';
 
 
 
-function Main(props){
- console.log(props);
- 
-    return(
-        <main className={st.main}>
-        
-        <AboutMe/>
-        <MyPosts  state ={props.state}/>
-      </main>
-    )
+function Main(props) {
+
+
+  return (
+    <main className={st.main}>
+
+      <AboutMe />
+      <MyPosts state={props.state} />
+    </main>
+  )
 }
-export default  Main;
+export default Main;
 
 
 
-function AboutMe(props){
-  return(
+function AboutMe(props) {
+  return (
     <div className={st.aboutMe}>
-    <div className={st.ava}>
+      <div className={st.ava}>
         image
     </div>
-    <div className={st.description}>
+      <div className={st.description}>
         desc
     </div>
-  </div>
+    </div>
   )
 }

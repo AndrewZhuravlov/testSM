@@ -4,7 +4,7 @@ import PostForm from './PostForm/PostForm'
 import Post from './Post/Post';
 
 function MyPosts(props) {
-console.log(props);
+
 
   /* типа данные с сервера */
   /* тут мы преобразуем данные пришедшие с сервера в массив обьектов который в JSX читается */

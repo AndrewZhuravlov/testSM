@@ -11,13 +11,13 @@ import Settings from './components/Settings/Settings';
 
 
 function App(props) {
- console.log(props);
+ 
  
   return (
     <BrowserRouter>
       <div className='wrapper'>
         <Header />
-        <Aside />
+        <Aside state = {props.state.forFellows} />
         <Route path='/profile' render={()=><Main state ={props.state.postsData} />} />
         <Route path='/messages' render={()=><Dialogs state={props.state.forDialogsData} />} />
         <Route path='/music' component={Music} />

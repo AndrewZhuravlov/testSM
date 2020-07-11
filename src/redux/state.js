@@ -24,7 +24,11 @@ let userData = [
 
 ]
 
-
+let fellows = [
+    new User('Andrew', 1),
+    new User('Helen', 2),
+    new User('Antony', 3)
+]
 function Mes(name, message, id) {
     this.name = name;
     this.id = id;
@@ -40,7 +44,13 @@ let state = {
         userData,
         messageData,
     },
-    postsData
+    postsData,
+
+    forFellows : {
+        
+        fellows
+        
+    }
 
 }
 export default state;
