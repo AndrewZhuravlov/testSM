@@ -2,11 +2,25 @@
 /* типа данные с сервера */
 /* user constructor */
 /* mesasges constructor */
-let postsData = [
-    { id: 1, message: 'Privet', likeCounter: 20, },
-    { id: 2, message: 'Tu Pityxxxx', likeCounter: 12 },
-    { id: 3, message: 'Tu Pityxxxx', likeCounter: 12 }
 
+
+function addPost(postMes) {
+    
+  
+   return postsData.push({
+        id: 6,
+        message: postMes,
+        likeCounter: 20,
+    },);
+    
+}
+
+
+let postsData = [
+    { id: 1, message: 'Privet', likeCounter: 20 },
+    { id: 2, message: 'Tu Pityxxxx', likeCounter: 12 },
+    { id: 3, message: 'Tu Pityxxxx', likeCounter: 12 },
+    
 ]
 
 function User(name, path) {
@@ -46,11 +60,14 @@ let state = {
     },
     postsData,
 
-    forFellows : {
-        
-        fellows
-        
-    }
+    forFellows: {
 
+        fellows
+
+    },
+    
 }
+
+
+export {addPost};
 export default state;

@@ -5,7 +5,7 @@ import Post from './Post/Post';
 
 function MyPosts(props) {
 
-
+console.log(props);
   /* типа данные с сервера */
   /* тут мы преобразуем данные пришедшие с сервера в массив обьектов который в JSX читается */
   let posts = props.state.map(item=>  <Post message = {item.message}  likeCounter = {item.likeCounter} id = {item.id} />)
@@ -15,7 +15,7 @@ function MyPosts(props) {
   return (
 
     <div className={st.myPosts}>
-      <PostForm />
+      <PostForm addPost={props.addPost}  />
       {posts}
      
     </div>

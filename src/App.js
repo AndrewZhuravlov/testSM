@@ -18,7 +18,7 @@ function App(props) {
       <div className='wrapper'>
         <Header />
         <Aside state = {props.state.forFellows} />
-        <Route path='/profile' render={()=><Main state ={props.state.postsData} />} />
+        <Route path='/profile' render={()=><Main state ={props.state.postsData} addPost={props.addPost} />} />
         <Route path='/messages' render={()=><Dialogs state={props.state.forDialogsData} />} />
         <Route path='/music' component={Music} />
         <Route path='/news' component={News} />
