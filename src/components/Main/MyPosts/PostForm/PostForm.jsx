@@ -3,13 +3,13 @@ import st from './PostForm.module.css'
 
 
 function PostForm(props) {
-console.log(props);
+debugger
   let newPostElement = React.createRef();
 
   let addPost= ()=>{
     
     let text = newPostElement.current.value;
-    props.addPost(text);
+    props.store.addPost(text);
     newPostElement.current.value = '';
   }
   

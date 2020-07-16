@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import state, { addPost,  } from './redux/state';
+import store from './redux/state';
 
 
 
@@ -11,7 +11,7 @@ import state, { addPost,  } from './redux/state';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state} addPost={addPost}   />
+    <App store={store} />
   </React.StrictMode>,
   document.getElementById('root')
 );

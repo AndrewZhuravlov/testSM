@@ -3,71 +3,49 @@
 /* user constructor */
 /* mesasges constructor */
 
-
-function addPost(postMes) {
-    
-  
-   return postsData.push({
-        id: 6,
-        message: postMes,
-        likeCounter: 20,
-    },);
-    
-}
+let store = {
+    addPost: function addPost(postMes) {
 
 
-let postsData = [
-    { id: 1, message: 'Privet', likeCounter: 20 },
-    { id: 2, message: 'Tu Pityxxxx', likeCounter: 12 },
-    { id: 3, message: 'Tu Pityxxxx', likeCounter: 12 },
-    
-]
-
-function User(name, path) {
-
-    this.path = path;
-    this.name = name;
-}
-
-let userData = [
-    new User('Andrew', 1),
-    new User('Helen', 2),
-    new User('Antony', 3),
-    new User('Svin', 4),
-    new User('Alex', 5),
-
-]
-
-let fellows = [
-    new User('Andrew', 1),
-    new User('Helen', 2),
-    new User('Antony', 3)
-]
-function Mes(name, message, id) {
-    this.name = name;
-    this.id = id;
-    this.message = message;
-}
-let messageData = [
-    new Mes('Andrew', 'YO', 1),
-    new Mes('Andrew1', 'YO2', 2),
-
-]
-let state = {
-    forDialogsData: {
-        userData,
-        messageData,
-    },
-    postsData,
-
-    forFellows: {
-
-        fellows
+        return this._state.postsData.push({
+            id: 6,
+            message: postMes,
+            likeCounter: 20,
+        });
 
     },
+
+    _state: {
+        postsData: [
+            { id: 1, message: 'Privet', likeCounter: 20 },
+            { id: 2, message: 'Tu Pityxxxx', likeCounter: 12 },
+            { id: 3, message: 'Tu Pityxxxx', likeCounter: 12 },
     
+        ],
+        userData: [
+             {name:'Andrew', path: 1},
+             {name:'Helen', path: 2},
+             {name:'Svin', path: 3},
+             {name:'Alex', path: 4},
+           
+        ],
+    
+        fellows: [
+            {name:'Andrew', path: 1},
+            {name:'Helen', path: 2},
+            {name:'Svin', path: 3},
+        ],
+    
+        messageData: [
+            {name:'Andrew', message: 'YO', id: 1},
+            {name:'Andrew2', message: 'YO2', id: 2},
+            
+    
+        ],
+    }
+
 }
 
 
-export {addPost};
-export default state;
+
+export default store;

@@ -2,9 +2,8 @@ import React from 'react';
 import style from './aside.module.css'
 import { NavLink } from 'react-router-dom';
 function Aside(props) {
-  /* console.log(props); */
-  
- let fellows = props.state.fellows.map(item=> <Fellow name = {item.name} path = {item.path}/>) 
+ 
+ let fellows = props.store.map(item=> <Fellow name = {item.name} path = {item.path}/>) 
  
   return (
     <aside className={style.nav}>

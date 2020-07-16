@@ -10,16 +10,17 @@ import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 
 
+
 function App(props) {
  
- 
+ /* debugger */
   return (
     <BrowserRouter>
       <div className='wrapper'>
         <Header />
-        <Aside state = {props.state.forFellows} />
-        <Route path='/profile' render={()=><Main state ={props.state.postsData} addPost={props.addPost} />} />
-        <Route path='/messages' render={()=><Dialogs state={props.state.forDialogsData} />} />
+        <Aside store = {props.store._state.fellows} />
+        <Route path='/profile' render={()=><Main store ={props.store}  />} />
+        <Route path='/messages' render={()=><Dialogs store={props.store} />} />
         <Route path='/music' component={Music} />
         <Route path='/news' component={News} />
         <Route path='/settings' component={Settings } />

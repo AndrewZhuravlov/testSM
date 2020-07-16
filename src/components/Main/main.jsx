@@ -11,7 +11,7 @@ function Main(props) {
     <main className={st.main}>
 
       <AboutMe />
-      <MyPosts state={props.state} addPost={props.addPost} />
+      <MyPosts store={props.store}  />
     </main>
   )
 }
