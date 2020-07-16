@@ -4,7 +4,7 @@
 /* mesasges constructor */
 
 let store = {
-    addPost: function addPost(postMes) {
+    addPost: function (postMes) {
 
 
         return this._state.postsData.push({
@@ -13,6 +13,10 @@ let store = {
             likeCounter: 20,
         });
 
+    },
+
+    get getState(){
+        return this._state;
     },
 
     _state: {

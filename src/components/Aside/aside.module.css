@@ -21,7 +21,7 @@
     color: gold;
   }
   .fellows{
-    display: flex;
+    display: inline-block;
     flex-wrap: nowrap;
     margin-top: 10px;
   }

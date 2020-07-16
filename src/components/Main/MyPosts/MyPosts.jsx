@@ -8,7 +8,7 @@ function MyPosts(props) {
 
   /* типа данные с сервера */
   /* тут мы преобразуем данные пришедшие с сервера в массив обьектов который в JSX читается */
-  let posts = props.store._state.postsData.map(item=>  <Post message = {item.message}  likeCounter = {item.likeCounter} id = {item.id} />)
+  let posts = props.store.getState.postsData.map(item=>  <Post message = {item.message}  likeCounter = {item.likeCounter} id = {item.id} />)
 
 
     

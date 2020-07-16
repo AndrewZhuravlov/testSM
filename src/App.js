@@ -12,18 +12,18 @@ import Settings from './components/Settings/Settings';
 
 
 function App(props) {
- 
- /* debugger */
+
+
   return (
     <BrowserRouter>
       <div className='wrapper'>
         <Header />
-        <Aside store = {props.store._state.fellows} />
-        <Route path='/profile' render={()=><Main store ={props.store}  />} />
-        <Route path='/messages' render={()=><Dialogs store={props.store} />} />
+        <Aside store={props.store._state.fellows} />
+        <Route path='/profile' render={() => <Main store={props.store} />} />
+        <Route path='/messages' render={() => <Dialogs store={props.store} />} />
         <Route path='/music' component={Music} />
         <Route path='/news' component={News} />
-        <Route path='/settings' component={Settings } />
+        <Route path='/settings' component={Settings} />
 
 
       </div>
