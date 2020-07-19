@@ -1,7 +1,4 @@
 
-/* типа данные с сервера */
-/* user constructor */
-/* mesasges constructor */
 
 
 let store = {
@@ -9,23 +6,7 @@ let store = {
         console.log('State changed');
     },
 
-    /* addPost: function (postMes) {
-
-
-        return this._state.postsData.push({
-            id: 6,
-            message: postMes,
-            likeCounter: 20,
-        });
-        
-    }, */
-
-  /*   newText(newText){
-
-        this._state.newPostText.text = newText
-        this.rerenderEntireTree(this);
-    },
- */
+   
     dispatch(action){
 
         if(action.type === 'AddPost'){
@@ -35,6 +16,7 @@ let store = {
                 message: action.postMes,
                 likeCounter: 20,
             });
+            
 
         }else if(action.type === 'textChange'){
 
@@ -89,6 +71,26 @@ let store = {
 
 }
 
+export const textChangerActionCreator = (typeOfAction, varValue) => {
 
+    return {
+  
+      type: typeOfAction,
+      newText: varValue,
+  
+    }
+  
+  }
+  
+export const addPostActionCreator = (typeOfAction, varValue) => {
+  
+    return {
+  
+      type: typeOfAction,
+      postMes: varValue,
+  
+    }
+  
+  }
 
 export default store;

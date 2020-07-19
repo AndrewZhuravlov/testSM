@@ -1,5 +1,7 @@
 import React from 'react';
 import st from './PostForm.module.css'
+import { textChangerActionCreator, addPostActionCreator} from '../../../../redux/state';
+
 
 
 function PostForm(props) {
@@ -9,13 +11,13 @@ function PostForm(props) {
   const textChanger = () => {
 
     let currentText = newPostElement.current.value;
-    props.store.dispatch({type: 'textChange', newText: currentText});
+    props.store.dispatch(textChangerActionCreator('textChange', currentText));
 
   }
   let addPost= ()=>{
 
     let text = newPostElement.current.value;
-    props.store.dispatch({type:'AddPost', postMes: text});
+    props.store.dispatch(addPostActionCreator('AddPost', text));
   }
   
   return (
