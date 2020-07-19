@@ -3,8 +3,13 @@
 /* user constructor */
 /* mesasges constructor */
 
+
 let store = {
-    addPost: function (postMes) {
+    rerenderEntireTree ()  {
+        console.log('State changed');
+    },
+
+    /* addPost: function (postMes) {
 
 
         return this._state.postsData.push({
@@ -12,7 +17,37 @@ let store = {
             message: postMes,
             likeCounter: 20,
         });
+        
+    }, */
 
+  /*   newText(newText){
+
+        this._state.newPostText.text = newText
+        this.rerenderEntireTree(this);
+    },
+ */
+    dispatch(action){
+
+        if(action.type === 'AddPost'){
+
+            this._state.postsData.push({
+                id: 6,
+                message: action.postMes,
+                likeCounter: 20,
+            });
+
+        }else if(action.type === 'textChange'){
+
+            
+            this._state.newPostText.text = action.newText
+            this.rerenderEntireTree(this);
+
+        }
+
+    },
+    
+    subscribe(observer) {
+        this.rerenderEntireTree = observer;  // observer
     },
 
     get getState(){
@@ -24,7 +59,7 @@ let store = {
             { id: 1, message: 'Privet', likeCounter: 20 },
             { id: 2, message: 'Tu Pityxxxx', likeCounter: 12 },
             { id: 3, message: 'Tu Pityxxxx', likeCounter: 12 },
-    
+            
         ],
         userData: [
              {name:'Andrew', path: 1},
@@ -46,6 +81,10 @@ let store = {
             
     
         ],
+
+        newPostText:{
+            text : 'write',
+        },
     }
 
 }

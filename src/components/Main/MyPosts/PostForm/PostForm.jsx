@@ -6,11 +6,16 @@ function PostForm(props) {
 
   let newPostElement = React.createRef();
 
+  const textChanger = () => {
+
+    let currentText = newPostElement.current.value;
+    props.store.dispatch({type: 'textChange', newText: currentText});
+
+  }
   let addPost= ()=>{
-    debugger
+
     let text = newPostElement.current.value;
-    props.store.addPost(text);
-    newPostElement.current.value = '';
+    props.store.dispatch({type:'AddPost', postMes: text});
   }
   
   return (
@@ -18,7 +23,7 @@ function PostForm(props) {
     <div className={st.postCreater}>
       <form action="#">
           <h2>My Posts</h2>
-          <input ref={newPostElement}   type="text" placeholder = 'your news...' />
+          <input onChange = {textChanger} ref={newPostElement} value ={props.store.getState.newPostText.text}   type="text" placeholder = 'your news...' />
           <button onClick={addPost}>Post</button>
       </form>
     </div>
