@@ -1,4 +1,4 @@
-
+import postReducer  from "./main-reducer";
 
 
 let store = {
@@ -9,23 +9,8 @@ let store = {
    
     dispatch(action){
 
-        if(action.type === 'AddPost'){
-
-            this._state.postsData.push({
-                id: 6,
-                message: action.postMes,
-                likeCounter: 20,
-            });
-            
-
-        }else if(action.type === 'textChange'){
-
-            
-            this._state.newPostText.text = action.newText
-            this.rerenderEntireTree(this);
-
-        }
-
+         this._state = postReducer(this._state, action)
+         this.rerenderEntireTree(this);
     },
     
     subscribe(observer) {
@@ -71,26 +56,6 @@ let store = {
 
 }
 
-export const textChangerActionCreator = (typeOfAction, varValue) => {
 
-    return {
-  
-      type: typeOfAction,
-      newText: varValue,
-  
-    }
-  
-  }
-  
-export const addPostActionCreator = (typeOfAction, varValue) => {
-  
-    return {
-  
-      type: typeOfAction,
-      postMes: varValue,
-  
-    }
-  
-  }
 
 export default store;

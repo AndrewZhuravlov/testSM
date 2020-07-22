@@ -1,6 +1,6 @@
 import React from 'react';
 import st from './PostForm.module.css'
-import { textChangerActionCreator, addPostActionCreator} from '../../../../redux/state';
+import { textChangerActionCreator, addPostActionCreator} from '../../../../redux/main-reducer';
 
 
 
