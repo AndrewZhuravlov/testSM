@@ -1,4 +1,5 @@
 import postReducer  from "./main-reducer";
+import { dialogReducer } from "./dialogs-reducer";
 
 
 let store = {
@@ -8,7 +9,7 @@ let store = {
 
    
     dispatch(action){
-
+         this._state = dialogReducer(this._state, action)        
          this._state = postReducer(this._state, action)
          this.rerenderEntireTree(this);
     },
@@ -52,6 +53,10 @@ let store = {
         newPostText:{
             text : 'write',
         },
+
+        newMessageText:{
+            text: 'HI!'
+        }
     }
 
 }

@@ -1,7 +1,7 @@
 
 
 .wrapper{
-  
+  height: fit-content;
   background-color: #919ee57a;
   display: grid;
   grid-template-rows: 60px 1fr;
